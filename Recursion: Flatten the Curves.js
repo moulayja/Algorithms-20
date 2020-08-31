@@ -23,3 +23,10 @@ You can read on more topics about recursion (see Resources tab) if you aren't fa
 
 */
 
+function flatten(r) {
+	if (typeof(r)!='object') return [r]
+	return r.map(flatten).reduce((a,b)=>a.concat(b),[])	
+}
+
+
+
